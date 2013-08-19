@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- General -->
+    <string name="app_name">Coup2Lap@n</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_about">A propos</string>
+    <string name="action_settings">Propriétés</string>
+    <string name="about_button">En savoir plus</string>
+    <string name="about_short">Cette application est encore en développement, elle n\'est proposée qu\'à titre de démonstration et de débugage. Merci de porter un retard critique et de me faire part de vos remarques</string>
+    <string name="about_long">La génèse de cette application va trouver sa place ici, à bientôt</string>
+
+    <!-- MainActivity -->
+    <string name="bouton_main_01">Etat actuel</string>
+    <string name="bouton_main_02">Service</string>
+    <string name="bouton_main_03">Historique</string>
+    <string name="welcome_message">Bienvenue dans l\'application\ </string>
+    <string name="welcome_credit">Crédits : Hadrien - Version 0.1</string>
+
+    <!-- Autres activités -->
+    <string name="title_activity_settings">Propriétés</string>
+    <string name="title_activity_about">A propos</string>
+    <string name="title_activity_actual_state">Etat actuel</string>
+    <string name="title_activity_service">Services</string>
+    <string name="title_activity_historic">Historique</string>
+    <string name="actual_subtitle">L\'état actuel de la batterie :</string>
+    <string name="actual_refresh">Rafraichir</string>
+    <string name="actual_majcours">Mise à jour en cours</string>
+
+    <!--
+    état de santé de la batterie
+    batteryhealth1->BATTERY_HEALTH_UNKNOWN
+    batteryhealth2->BATTERY_HEALTH_GOOD
+    batteryhealth3->BATTERY_HEALTH_OVERHEAT
+    batteryhealth4->BATTERY_HEALTH_DEAD
+    batteryhealth5->BATTERY_HEALTH_OVER_VOLTAGE
+    batteryhealth6->BATTERY_HEALTH_UNSPECIFIED_FAILURE
+    batteryhealth7->BATTERY_HEALTH_COLD
+    -->
+    <string name="batteryhealth1">Inconnue</string>
+    <string name="batteryhealth2">Bonne</string>
+    <string name="batteryhealth3">En surchauffe</string>
+    <string name="batteryhealth4">Morte</string>
+    <string name="batteryhealth5">En surtension</string>
+    <string name="batteryhealth6">Panne inconnue</string>
+    <string name="batteryhealth7">Déchargée</string>
+
+    <!-- branchement en cours -->
+    <string name="batterypluggedAC">Sur une prise de courant</string>
+    <string name="batterypluggedUSB">Sur un port USB</string>
+    <string name="batterypluggedNON">-</string>
+
+    <!--
+    status de la batterie
+    batterystatus1->BATTERY_STATUS_UNKNOWN
+    batterystatus2->BATTERY_STATUS_CHARGING
+    batterystatus3->BATTERY_STATUS_DISCHARGING
+    batterystatus4->BATTERY_STATUS_NOT_CHARGING
+    batterystatus5->BATTERY_STATUS_FULL
+    -->
+    <string name="batterystatus1">Inconnue</string>
+    <string name="batterystatus2">Chargement</string>
+    <string name="batterystatus3">Déchargement</string>
+    <string name="batterystatus4">Pas en charge</string>
+    <string name="batterystatus5">Pleine</string>
+
+    <!-- présence de la batterie -->
+    <string name="batterypresentfalse">la batterie est absente</string>
+
+    <!-- Label info batterie -->
+    <string name="labelstatus">Status \: </string>
+    <string name="labelplugged">Branchée</string>
+    <string name="labelhealth">Santé</string>
+    <string name="labelstateofcharge">Etat de charge</string>
+    <string name="labeltemperature">Température</string>
+    <string name="labeltension">Tension</string>
+    <string name="labeltechnology">Technologie</string>
+    <!-- unités inf batterie -->
+    <string name="unitestateofcharge">%</string>
+    <string name="unitetemperature">°C</string>
+    <string name="unitetension">mV</string>
+
+</resources>
