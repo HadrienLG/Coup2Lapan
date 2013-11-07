@@ -9,8 +9,52 @@
     tools:context=".HistoricActivity" >
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/historic_title"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
         android:text="@string/hello_world" />
+
+    <LinearLayout
+        android:id="@+id/historic_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/historic_title"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/historic_refresh"
+            style="@style/AppBaseTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bouton_refresh" />
+
+        <Button
+            android:id="@+id/historic_clean"
+            style="@style/AppBaseTheme"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/bouton_clean" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button_historic_export"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="exportFileToExternal"
+        android:text="@string/bouton_historic_exporter" />
+
+    <TextView
+        android:id="@+id/historic_log"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@id/button_historic_export"
+        android:layout_below="@id/historic_buttons"
+        android:gravity="center_vertical|center_horizontal"
+        android:text="@string/historic_initialtext" />
 
 </RelativeLayout>

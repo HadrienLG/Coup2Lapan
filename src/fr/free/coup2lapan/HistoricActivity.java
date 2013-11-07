@@ -20,16 +20,24 @@
 
 package fr.free.coup2lapan;
 
-import fr.free.coup2lapan.R;
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
-import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.NavUtils;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.support.v4.app.NavUtils;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class HistoricActivity extends Activity {
+
+	private TextView logHistoric;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +45,72 @@ public class HistoricActivity extends Activity {
 		setContentView(R.layout.activity_historic_main);
 		// Show the Up button in the action bar.
 		setupActionBar();
+
+		logHistoric = (TextView) findViewById(R.id.historic_log);
+
+		final Button refreshbutton = (Button) findViewById(R.id.historic_refresh);
+		refreshbutton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				// TODO read the log file and print XX last entries
+
+				/*FileReader logFR = null;
+				File batteryLogFile = new File(getApplicationContext().getFilesDir(), getString(R.string.fileName));
+				try {
+					logFR = new FileReader(batteryLogFile);
+				    @SuppressWarnings("resource")
+					BufferedReader logBR = new BufferedReader(logFR);
+				    String line = logBR.readLine();
+				    while (null != line) {
+				    	logHistoric.append(line);
+				    	logHistoric.append("\n");
+				        line = logBR.readLine();
+				    }
+				} catch (IOException e) {
+				    // TODO Auto-generated catch block
+				    e.printStackTrace();
+				} finally {
+				    if (null != logFR) {
+				        try {
+				        	logFR.close();
+				        } catch (IOException e) {
+				            // ignore
+				        }
+				    }
+				}*/
+
+				try {
+					InputStream in=openFileInput(getString(R.string.fileName));
+
+					if (in!=null) {
+						InputStreamReader tmp=new InputStreamReader(in);
+						BufferedReader reader=new BufferedReader(tmp);
+						String str;
+						StringBuilder buf=new StringBuilder();
+
+						while ((str = reader.readLine()) != null) {
+							buf.append(str+"\n");
+						}
+
+						in.close();
+						logHistoric.setText(buf.toString());
+					}
+				} catch (java.io.FileNotFoundException e) {
+					Toast.makeText(getApplicationContext(), "Exception: "+e.toString(), Toast.LENGTH_LONG).show();
+				}
+				catch (Throwable t) {
+					Toast.makeText(getApplicationContext(), "Exception: "+t.toString(), Toast.LENGTH_LONG).show();
+				}
+
+				//logHistoric.setText("TODO : Lire fichier de mesures");
+			}
+		});
+
+		final Button cleanbutton = (Button) findViewById(R.id.historic_clean);
+		cleanbutton.setOnClickListener(new View.OnClickListener() {
+			public void onClick(View v) {
+				logHistoric.setText("");
+			}
+		});
 	}
 
 	/**
@@ -77,6 +151,16 @@ public class HistoricActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
+
+	/** Called when the user clicks button_historic_export */
+	public void exportFileToExternal(View view) {
+		// Do something in response to button
+		Toast.makeText(getApplicationContext(), getString(R.string.exportinit), Toast.LENGTH_SHORT).show();
+
+		//TODO copy internal file to external storage
+
+	}
+
 	public void openSettings() {
 		// permet d'ouvrir l'activité settings
 		Intent intent = new Intent(this, SettingsActivity.class);

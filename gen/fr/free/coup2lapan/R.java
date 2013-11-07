@@ -30,24 +30,35 @@ public final class R {
         public static final int aboutbutton01=0x7f080002;
         public static final int aboutlong=0x7f080001;
         public static final int aboutshort=0x7f080000;
-        public static final int action_about=0x7f080014;
-        public static final int action_settings=0x7f080013;
-        public static final int buttonActualRefresh=0x7f080004;
-        public static final int button_main_1=0x7f08000f;
-        public static final int button_main_2=0x7f080010;
-        public static final int button_main_3=0x7f080011;
+        public static final int action_about=0x7f08001f;
+        public static final int action_settings=0x7f08001e;
+        public static final int actual_buttons=0x7f080004;
+        public static final int actual_data=0x7f080008;
+        public static final int actual_start_button=0x7f080006;
+        public static final int actual_stop_button=0x7f080007;
+        public static final int buttonActualRefresh=0x7f080005;
+        public static final int button_historic_export=0x7f080015;
+        public static final int button_main_1=0x7f080019;
+        public static final int button_main_2a=0x7f08001a;
+        public static final int button_main_2b=0x7f08001b;
+        public static final int button_main_3=0x7f08001c;
+        public static final int historic_buttons=0x7f080012;
+        public static final int historic_clean=0x7f080014;
+        public static final int historic_log=0x7f080016;
+        public static final int historic_refresh=0x7f080013;
+        public static final int historic_title=0x7f080011;
         public static final int textViewActual00=0x7f080003;
-        public static final int textViewActual01=0x7f080005;
-        public static final int textViewActual02=0x7f080006;
-        public static final int textViewActual03=0x7f080007;
-        public static final int textViewActual04=0x7f080008;
-        public static final int textViewActual05=0x7f080009;
-        public static final int textViewActual06=0x7f08000a;
-        public static final int textViewActual07=0x7f08000b;
-        public static final int textViewActual08=0x7f08000c;
-        public static final int textViewMain01=0x7f08000d;
-        public static final int textViewMain02=0x7f08000e;
-        public static final int textViewMain03=0x7f080012;
+        public static final int textViewActual01=0x7f080009;
+        public static final int textViewActual02=0x7f08000a;
+        public static final int textViewActual03=0x7f08000b;
+        public static final int textViewActual04=0x7f08000c;
+        public static final int textViewActual05=0x7f08000d;
+        public static final int textViewActual06=0x7f08000e;
+        public static final int textViewActual07=0x7f08000f;
+        public static final int textViewActual08=0x7f080010;
+        public static final int textViewMain01=0x7f080017;
+        public static final int textViewMain02=0x7f080018;
+        public static final int textViewMain03=0x7f08001d;
     }
     public static final class layout {
         public static final int activity_about=0x7f030000;
@@ -67,9 +78,8 @@ public final class R {
         public static final int about_short=0x7f050005;
         public static final int action_about=0x7f050002;
         public static final int action_settings=0x7f050003;
-        public static final int actual_majcours=0x7f050013;
-        public static final int actual_refresh=0x7f050012;
-        public static final int actual_subtitle=0x7f050011;
+        public static final int actual_majcours=0x7f050015;
+        public static final int actual_subtitle=0x7f050014;
         /**  General 
          */
         public static final int app_name=0x7f050000;
@@ -85,21 +95,21 @@ public final class R {
 
     
          */
-        public static final int batteryhealth1=0x7f050014;
-        public static final int batteryhealth2=0x7f050015;
-        public static final int batteryhealth3=0x7f050016;
-        public static final int batteryhealth4=0x7f050017;
-        public static final int batteryhealth5=0x7f050018;
-        public static final int batteryhealth6=0x7f050019;
-        public static final int batteryhealth7=0x7f05001a;
+        public static final int batteryhealth1=0x7f05001e;
+        public static final int batteryhealth2=0x7f05001f;
+        public static final int batteryhealth3=0x7f050020;
+        public static final int batteryhealth4=0x7f050021;
+        public static final int batteryhealth5=0x7f050022;
+        public static final int batteryhealth6=0x7f050023;
+        public static final int batteryhealth7=0x7f050024;
         /**  branchement en cours 
          */
-        public static final int batterypluggedAC=0x7f05001b;
-        public static final int batterypluggedNON=0x7f05001d;
-        public static final int batterypluggedUSB=0x7f05001c;
+        public static final int batterypluggedAC=0x7f050025;
+        public static final int batterypluggedNON=0x7f050027;
+        public static final int batterypluggedUSB=0x7f050026;
         /**  présence de la batterie 
          */
-        public static final int batterypresentfalse=0x7f050023;
+        public static final int batterypresentfalse=0x7f05002d;
         /** 
     status de la batterie
     batterystatus1->BATTERY_STATUS_UNKNOWN
@@ -110,40 +120,51 @@ public final class R {
 
     
          */
-        public static final int batterystatus1=0x7f05001e;
-        public static final int batterystatus2=0x7f05001f;
-        public static final int batterystatus3=0x7f050020;
-        public static final int batterystatus4=0x7f050021;
-        public static final int batterystatus5=0x7f050022;
+        public static final int batterystatus1=0x7f050028;
+        public static final int batterystatus2=0x7f050029;
+        public static final int batterystatus3=0x7f05002a;
+        public static final int batterystatus4=0x7f05002b;
+        public static final int batterystatus5=0x7f05002c;
+        public static final int bouton_clean=0x7f05001c;
+        public static final int bouton_historic_exporter=0x7f05001a;
         /**  MainActivity 
          */
         public static final int bouton_main_01=0x7f050007;
-        public static final int bouton_main_02=0x7f050008;
-        public static final int bouton_main_03=0x7f050009;
+        public static final int bouton_main_03=0x7f05000a;
+        public static final int bouton_main_startService=0x7f050008;
+        public static final int bouton_main_stopService=0x7f050009;
+        public static final int bouton_refresh=0x7f05001d;
+        public static final int exportFailed=0x7f05000e;
+        public static final int exportSucced=0x7f05000d;
+        public static final int exportinit=0x7f05001b;
+        public static final int fileName=0x7f050018;
         public static final int hello_world=0x7f050001;
-        public static final int labelhealth=0x7f050026;
-        public static final int labelplugged=0x7f050025;
-        public static final int labelstateofcharge=0x7f050027;
+        public static final int historic_initialtext=0x7f050019;
+        public static final int labelhealth=0x7f050030;
+        public static final int labelplugged=0x7f05002f;
+        public static final int labelstateofcharge=0x7f050031;
         /**  Label info batterie 
          */
-        public static final int labelstatus=0x7f050024;
-        public static final int labeltechnology=0x7f05002a;
-        public static final int labeltemperature=0x7f050028;
-        public static final int labeltension=0x7f050029;
-        public static final int title_activity_about=0x7f05000d;
-        public static final int title_activity_actual_state=0x7f05000e;
-        public static final int title_activity_historic=0x7f050010;
-        public static final int title_activity_service=0x7f05000f;
+        public static final int labelstatus=0x7f05002e;
+        public static final int labeltechnology=0x7f050034;
+        public static final int labeltemperature=0x7f050032;
+        public static final int labeltension=0x7f050033;
+        public static final int service_started=0x7f050016;
+        public static final int service_stopped=0x7f050017;
+        public static final int title_activity_about=0x7f050010;
+        public static final int title_activity_actual_state=0x7f050011;
+        public static final int title_activity_historic=0x7f050013;
+        public static final int title_activity_service=0x7f050012;
         /**  Autres activités 
          */
-        public static final int title_activity_settings=0x7f05000c;
+        public static final int title_activity_settings=0x7f05000f;
         /**  unités inf batterie 
          */
-        public static final int unitestateofcharge=0x7f05002b;
-        public static final int unitetemperature=0x7f05002c;
-        public static final int unitetension=0x7f05002d;
-        public static final int welcome_credit=0x7f05000b;
-        public static final int welcome_message=0x7f05000a;
+        public static final int unitestateofcharge=0x7f050035;
+        public static final int unitetemperature=0x7f050036;
+        public static final int unitetension=0x7f050037;
+        public static final int welcome_credit=0x7f05000c;
+        public static final int welcome_message=0x7f05000b;
     }
     public static final class style {
         /** 

@@ -20,26 +20,33 @@
 
 package fr.free.coup2lapan;
 
-import fr.free.coup2lapan.R;
-
-import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.Toast;
 
 public class MainActivity extends Activity {
+
+	private Button batteryLogStart;
+	private Button batteryLogStop;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		/* Pour afficher un Up Button
-		getActionBar().setDisplayHomeAsUpEnabled(true);
-		 */
+		batteryLogStart = ((Button) findViewById(R.id.button_main_2a));
+		batteryLogStart.setOnClickListener(StartServiceListener);
+
+		batteryLogStop = ((Button) findViewById(R.id.button_main_2b));
+		batteryLogStop.setOnClickListener(StopServiceListener);
 	}
 
 	@Override
@@ -66,36 +73,51 @@ public class MainActivity extends Activity {
 	}
 
 	public void openSettings() {
-		// permet d'ouvrir l'activité settings
+		// open the activity settings
 		Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);
 	}
 
 	public void openAbout() {
-		// permet d'ouvrir l'activité about
+		// open the activity about
 		Intent intent = new Intent(this, AboutActivity.class);
 		startActivity(intent);
 	}
-	
-	/** Called when the user clicks the Send button */
+
+	/** Called when the user clicks button_main_1 */
 	public void openActualStateActivity(View view) {
-	    // Do something in response to button
+		// Do something in response to button
 		Intent intent = new Intent(this, ActualStateActivity.class);
 		startActivity(intent);
 	}
-	
-	/** Called when the user clicks the Send button */
-	public void openServiceActivity(View view) {
-	    // Do something in response to button
-		Intent intent = new Intent(this, ServiceActivity.class);
-		startActivity(intent);
-	}
-	
-	/** Called when the user clicks the Send button */
+
+	OnClickListener StartServiceListener = new OnClickListener() {
+		public void onClick(View v) {
+			Context context = getApplicationContext();
+			try {
+				startService(new Intent(context, BatteryLogService.class));
+			} catch (Exception e) {
+				Toast.makeText(context, "Start Service failed", Toast.LENGTH_SHORT).show();
+			}
+		}
+	};
+
+	OnClickListener StopServiceListener = new OnClickListener() {
+		public void onClick(View v) {
+			Context context = getApplicationContext();
+			try {
+				stopService(new Intent(context, BatteryLogService.class));
+			} catch (Exception e) {
+				Toast.makeText(context, "Stop Service failed", Toast.LENGTH_SHORT).show();
+			}
+		}
+	};
+
+	/** Called when the user clicks button_main_3 */
 	public void openHistoricActivity(View view) {
-	    // Do something in response to button
+		// Do something in response to button
 		Intent intent = new Intent(this, HistoricActivity.class);
 		startActivity(intent);
 	}
-	
+
 }

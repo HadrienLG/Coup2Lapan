@@ -12,10 +12,13 @@
 
     <!-- MainActivity -->
     <string name="bouton_main_01">Etat actuel</string>
-    <string name="bouton_main_02">Service</string>
+    <string name="bouton_main_startService">Démarer le service</string>
+    <string name="bouton_main_stopService">Arrêter le service</string>
     <string name="bouton_main_03">Historique</string>
     <string name="welcome_message">Bienvenue dans l\'application\ </string>
-    <string name="welcome_credit">Crédits : Hadrien - Version 0.1</string>
+    <string name="welcome_credit">Crédits : Hadrien - Version 0.2</string>
+    <string name="exportSucced">Fichier exporté avec succès</string>
+    <string name="exportFailed">Oups, il y a eu un problème d\'écriture du fichier</string>
 
     <!-- Autres activités -->
     <string name="title_activity_settings">Propriétés</string>
@@ -24,8 +27,15 @@
     <string name="title_activity_service">Services</string>
     <string name="title_activity_historic">Historique</string>
     <string name="actual_subtitle">L\'état actuel de la batterie :</string>
-    <string name="actual_refresh">Rafraichir</string>
     <string name="actual_majcours">Mise à jour en cours</string>
+    <string name="service_started">Service démarré</string>
+    <string name="service_stopped">Service arrêté</string>
+    <string name="fileName">batteryLogFile.csv</string>
+    <string name="historic_initialtext">Initialisation...</string>
+    <string name="bouton_historic_exporter">Exporter le fichier</string>
+    <string name="exportinit">Le fichier va être exporté vers le stockage externe</string>
+    <string name="bouton_clean">R.A.Z.</string>
+    <string name="bouton_refresh">Rafraîchir</string>
 
     <!--
     état de santé de la batterie

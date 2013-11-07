@@ -18,9 +18,47 @@
         android:text="@string/actual_subtitle" />
 
     <LinearLayout
+        android:id="@+id/actual_buttons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical" >
+
+        <Button
+            android:id="@+id/buttonActualRefresh"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="false"
+            android:layout_alignParentStart="false"
+            android:text="@string/bouton_refresh" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/actual_start_button"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bouton_main_startService" />
+
+            <Button
+                android:id="@+id/actual_stop_button"
+                style="?android:attr/buttonStyleSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/bouton_main_stopService" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/actual_data"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/buttonActualRefresh"
+        android:layout_above="@id/actual_buttons"
         android:layout_below="@+id/textViewActual00"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
@@ -62,23 +100,13 @@
             android:layout_height="wrap_content" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonActualRefresh"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="false"
-        android:layout_alignParentRight="false"
-        android:layout_alignParentStart="false"
-        android:text="@string/actual_refresh" />
-
     <TextView
         android:id="@+id/textViewActual08"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/buttonActualRefresh"
+        android:layout_above="@id/actual_buttons"
         android:layout_centerHorizontal="true"
         android:gravity="center_horizontal"
-        android:text="@string/actual_refresh" />
+        android:text="@string/bouton_refresh" />
 
 </RelativeLayout>
